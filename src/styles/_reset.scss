@@ -1,0 +1,45 @@
+// custom scrollbar
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar:horizontal {
+  height: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 2rem;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-zz-primary);
+  border-radius: 2rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-zz-primary);
+}
+:root {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-zz-primary) transparent;
+  //scrollbar-gutter: stable  both-edges; // this adds some gap both sides
+}
+
+//
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16' height='1em' width='1em' ><path fillRule='evenodd' d='M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z'/></svg>");
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position-x: right;
+  background-position-y: center;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator,
+input[type='datetime-local']::-webkit-calendar-picker-indicator {
+  background: transparent;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='rgb(169, 170, 172)' viewBox='0 0 16 16' height='1em' width='1em'><path d='M3.5 0a.5.5 0 01.5.5V1h8V.5a.5.5 0 011 0V1h1a2 2 0 012 2v11a2 2 0 01-2 2H2a2 2 0 01-2-2V3a2 2 0 012-2h1V.5a.5.5 0 01.5-.5zM1 4v10a1 1 0 001 1h12a1 1 0 001-1V4H1z' /></svg>");
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position-x: right;
+  background-position-y: center;
+}

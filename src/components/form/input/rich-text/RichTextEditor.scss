@@ -1,0 +1,13 @@
+.custom-react-quill-container .ql-container.ql-snow,
+.custom-react-quill-container .ql-toolbar.ql-snow {
+  border: none;
+}
+
+/*
+   react-quill is not supporting dynamic colors,
+   if we want to use custom colors, we need to define its corresponding class here and we need to pass them in toolbar color option
+  */
+
+.ql-editor .ql-bg-\#0FDDAF {
+  background-color: #0fddaf;
+}

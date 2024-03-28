@@ -1,0 +1,50 @@
+/* ------date-range start-------- */
+
+.date-range-custom {
+  .react-daterange-picker__wrapper {
+    border: none !important;
+  }
+
+  &.date-range-placeholder {
+    .react-daterange-picker__wrapper {
+      input,
+      span,
+      .react-daterange-picker__clear-button {
+        opacity: 0;
+      }
+    }
+
+    &::before {
+      content: attr(data-date-range-placeholder);
+      color: rgb(135, 133, 133);
+      position: absolute;
+      z-index: 1;
+      padding: 0.8rem 0.7rem;
+    }
+  }
+
+  .react-calendar {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.4rem;
+    padding: 0.2rem;
+    border-color: rgb(229, 231, 235);
+  }
+
+  .react-daterange-picker__calendar {
+    background-color: white;
+    margin-bottom: 0.2rem;
+  }
+
+  .react-daterange-picker__range-divider {
+    @media screen and (min-width: 750px) {
+      min-width: 15%;
+    }
+
+    @media screen and (min-width: 615px) and (max-width: 750px) {
+      min-width: 8%;
+    }
+  }
+}
+
+/* ======date-range end====== */

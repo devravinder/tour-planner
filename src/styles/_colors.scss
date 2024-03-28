@@ -1,0 +1,42 @@
+$prefix: '--color-zz-';
+
+$opacities: (
+  '-xlight': 0.1,
+  '-light': 0.2,
+  '': 1,
+  // converts to hexa value
+  '-50': 0.05,
+  '-100': 0.1,
+  '-200': 0.2,
+  '-300': 0.3,
+  '-400': 0.4,
+  '-500': 0.5,
+  '-600': 0.6,
+  '-700': 0.7,
+  '-800': 0.8,
+  '-900': 0.9,
+);
+
+$colors: (
+  'primary-light': rgb(15, 207, 146),
+  'primary': rgb(0, 167, 111),
+  'primary-dark': rgb(4, 125, 85),
+  'secondary-light': rgb(6, 144, 186),
+  'secondary': rgb(0, 119, 154),
+  'secondary-dark': rgb(0, 105, 150),
+  'danger': rgb(247, 45, 22),
+  'disabled': rgb(72, 72, 72),
+);
+
+// https://www.sassmeister.com/
+@mixin generate-clors($colors, $opacities, $prefix) {
+  @each $color, $code in $colors {
+    @each $suffix, $opacity in $opacities {
+      #{$prefix}#{$color}#{$suffix}: rgba($code, $opacity);
+    }
+  }
+}
+
+:root {
+  @include generate-clors($colors, $opacities, $prefix);
+}

@@ -1,0 +1,1 @@
+ref: https://theodorusclarence.com/shorts/husky-commitlint-prettier

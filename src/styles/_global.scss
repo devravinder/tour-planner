@@ -1,0 +1,50 @@
+.styles-unset,
+.styles-unset * {
+  all: unset !important;
+}
+
+//---notification ---start
+.progress-bar-backwards{
+  width: 100%;
+  animation-timing-function: linear;
+  animation-duration: 6000ms; // should be passed from js
+  animation-name: progress-backwards;
+
+  &:hover{
+    animation-play-state: paused;
+  }
+
+  @keyframes progress-backwards {
+    0%  { width: 100%;}
+    10%  { width: 90%;}
+    20%  { width: 80%;}
+    30%  { width: 70%;}
+    40%  { width: 60%;}
+    50%  { width: 50%;}
+    60%  { width: 40%;}
+    70%  { width: 30%;}
+    80%  { width: 20%;}
+    90%  { width: 10%;}
+    100%  { width: 0%;}
+  }  
+}
+
+.slide:has(.progress-bar-backwards):hover{
+  .progress-bar-backwards{
+    animation-play-state: paused;
+  }
+}
+
+.slide{
+  animation-timing-function: linear;
+  animation-duration: 400ms;
+  animation-name: slide;
+
+  @keyframes slide {
+    0%   { transform: translateX(0); }
+    25%  { transform: translateX(-30px); }
+    75% { transform: translateX(10px); }
+    100% {transform:  translateX(0) ;}
+  }  
+}
+//---notification ---end
